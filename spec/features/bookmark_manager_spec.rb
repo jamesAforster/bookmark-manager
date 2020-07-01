@@ -9,7 +9,7 @@ feature 'Testing the bookmarks page' do
   scenario 'User is forwarded to /bookmarks and can see a list of bookmarks' do
     visit('/')
     click_button('my_bookmarks')
-    expect(page).to have_content("www.cats.com")
-    expect(page).to have_content("www.dogs.com")
+    expect(page).to have_content("www.makersacademy.com")
+    expect(page).to have_content("www.google.com")
   end
 end

@@ -1,29 +1,20 @@
+require 'pg'
+
 class Bookmark
-  @bookmarks = [
-    "www.cats.com",
-    "www.dogs.com"
-  ]
 def self.all
-  @bookmarks
-end
-
-  # @bookmarks.join
-  # attr_reader :user, :url, :name, :tag_collection, :comment_collection
-  #
-  # def self.all
-  #   bookmarks = {
-  #
-  #   }
-  # end
-  #
-  #
-  # def initialize(user, url, name, tag_collection, comment_collection)
-  #   @user = user
-  #   @url = url
-  #   @name = name
-  #   @tag_collection = tag_collection
-  #   @comment_collection = comment_collection
-  #
-  # end
-
+  begin
+    con = PG.connect :dbname => 'bookmark_manager', :user => 'makersadmin'
+    rs = con.exec "SELECT * FROM bookmarks"
+    array = []
+    rs.each do |row|
+      array << row["url"]
+    end
+    array
+    rescue PG::Error => e
+  puts e.message 
+  ensure
+    rs.clear if rs
+    con.close if con
+  end
+  end
 end

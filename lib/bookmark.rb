@@ -13,8 +13,8 @@ class Bookmark
       rs.each do |row|
         array << row["url"]
       end
-      
-      array
+    
+    array
 
   end
 end

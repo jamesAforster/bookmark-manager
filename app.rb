@@ -10,9 +10,9 @@ class Bookmark_Manager < Sinatra::Base
 
   get '/bookmarks' do
     'my bookmark'
-    bookmarks =Bookmark.all
+    bookmarks = Bookmark.all
     @bookmarks = bookmarks
-      erb :bookmarks
+    erb :bookmarks
   end
 
   run! if app_file == $0

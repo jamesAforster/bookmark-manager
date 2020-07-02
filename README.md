@@ -10,7 +10,7 @@ The LocalHost should be used to run this program.
 
 ## Usage
 
-To connect a database to the file, perform the following 
+To connect a database to the file, perform the following
 
 1) Connect to psql
 2) Create the database using the psql command CREATE DATABASE bookmark_manager;
@@ -23,9 +23,9 @@ To see the code in action Clone the directory, and perform the following in the 
 Rackup
 ```
 
-Then open your web browser into the resulting terminal. 
+Then open your web browser into the resulting terminal.
 
-The code for Bookmark Manager can also be run by going to 
+The code for Bookmark Manager can also be run by going to
 
 ```bash
 irb './lib/bookmark.rb'
@@ -52,16 +52,20 @@ I want to be able to comment on all bookmarks.
 ```
 
 ## Assumptions
+
 * All bookmarks are public
 * All bookmarks are timestamped
 
 ## Design
+
 ![Design](/images/Bookmark.png)
 
 ## Test Coverage
+
 ```
 Test Coverage: 0% -- 0 lines in 0 files
 ```
+
 ## Methods
 
 ```ruby
@@ -73,17 +77,18 @@ bookmark.new("name") # creates a new bookmark with string
 Tests are located within /spec folder. As the website is built out we would expect to have more specific testing on the website.
 
 ## Contributing
-As this is an afternoon week challenge, I have collaborated with @JoshuaNg2332. 
+
+As this is an afternoon week challenge, I have collaborated with @JoshuaNg2332.
 
 ## Follow Up
 
 We would like to include:
+
 - An option to have a private
 - A visually appealing webpage
 - Better security on login (for example, a captcha)
 
 <p align="center">
     <a href="https://https://makers.tech/">
-        <img src="https://img.shields.io/badge/-created%40makers-red"
-            alt="Made @ Makers"></a>
+        <img src="https://img.shields.io/badge/-created%40makers-red" alt="Made @ Makers"></a>
 </p>

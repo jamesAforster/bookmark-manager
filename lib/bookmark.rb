@@ -24,7 +24,6 @@ class Bookmark
       con = PG.connect :dbname => 'bookmark_manager'
     end
       con.exec("INSERT INTO bookmarks (url) VALUES ('#{bookmark}');")
-    
   end
 end
 
